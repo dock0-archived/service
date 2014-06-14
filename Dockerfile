@@ -6,5 +6,6 @@ RUN builder.sh skalibs
 RUN builder.sh execline
 RUN builder.sh s6
 ADD service /service
-ADD stage1 /sbin/init
+ADD stage1 /init
 ADD stage3 /service/.s6-svscan/finish
+CMD ["/init"]
