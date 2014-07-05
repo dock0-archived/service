@@ -1,4 +1,4 @@
-#!/command/execlineb -P
+#!/usr/bin/execlineb -P
 
 # Make sure everything is sane and ignore input
 cd /
@@ -6,7 +6,7 @@ umask 022
 fdclose 0
 
 # This should be printed to the console
-if { s6-echo "* init stage 1" }
+if { echo "* init stage 1" }
 # Close remaining handles to /dev/console
 fdclose 1 fdclose 2
 
