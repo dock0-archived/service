@@ -1,7 +1,7 @@
 FROM dock0/arch
 MAINTAINER akerl <me@lesaker.org>
 
-RUN pacman -Syu --needed --noconfirm make gcc git
+RUN pacman -Syu --needed --noconfirm make gcc psmisc
 
 ADD builder.sh /usr/local/bin/builder.sh
 
