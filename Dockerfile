@@ -1,7 +1,7 @@
 FROM dock0/arch
 MAINTAINER akerl <me@lesaker.org>
 
-RUN pacman -Syu --needed --noconfirm make gcc git
+RUN pacman -Syu --needed --noconfirm make gcc psmisc
 
 ADD builder.sh /usr/local/bin/builder.sh
 
@@ -14,6 +14,5 @@ RUN builder.sh execline
 RUN builder.sh s6
 
 ADD service /service
-ADD stage1 /init
-ADD stage3 /service/.s6-svscan/finish
+ADD init /init
 CMD ["/init"]
