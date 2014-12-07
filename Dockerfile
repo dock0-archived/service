@@ -1,17 +1,10 @@
 FROM dock0/arch
 MAINTAINER akerl <me@lesaker.org>
 
-RUN pacman -S --needed --noconfirm make gcc psmisc
+ADD installer.sh /usr/local/bin/installer.sh
 
-ADD builder.sh /usr/local/bin/builder.sh
-
-ADD skalibs /opt/skalibs
-ADD execline /opt/execline
-ADD s6 /opt/s6
-
-RUN builder.sh skalibs
-RUN builder.sh execline
-RUN builder.sh s6
+RUN installer.sh https://github.com/akerl/s6/releases/download/1.1.3.2-2/s6.tar.gz
+RUN installer.sh https://github.com/akerl/execline/releases/download/1.3.1.1-2/execline.tar.gz
 
 ADD service /service
 ADD init /init
