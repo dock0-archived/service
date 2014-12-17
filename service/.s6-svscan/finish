@@ -7,11 +7,12 @@ fdmove -c 2 1
 
 foreground { echo "Syncing disks." }
 foreground { sync }
+
 foreground { echo "Sending all processes the TERM signal." }
-foreground { killall -v -r .* }
-foreground { sleep 5 }
+foreground { kill -15 -1 }
+foreground { sleep 3 }
 foreground { echo "Sending all processes the KILL signal." }
-foreground { killall -9 -v -r .* }
+foreground { kill -9 -1 }
 
 wait { }
 
