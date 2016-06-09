@@ -1,4 +1,4 @@
-oFROM dock0/arch
+FROM dock0/arch
 MAINTAINER akerl <me@lesaker.org>
 RUN pacman -S --noconfirm s6 execline musl-amylum
 ADD service /service
