@@ -1,4 +1,4 @@
-Prospectus.extra_dep('file', 'prospectus_circleci')
+Prospectus.extra_dep('file', 'prospectus_travis')
 Prospectus.extra_dep('file', 'prospectus_dockerhub')
 
 image = File.readlines('README.md').first.strip
@@ -6,6 +6,6 @@ image = File.readlines('README.md').first.strip
 item do
   noop
 
-  extend ProspectusCircleci::Build.new(image)
+  extend ProspectusTravis::Build.new(image)
   extend ProspectusDockerhub::Build.new(image)
 end
