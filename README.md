@@ -1,9 +1,8 @@
 dock0/service
 =======
 
-[![Automated Build](https://img.shields.io/docker/build/dock0/service.svg)](https://hub.docker.com/r/dock0/service/)
-[![Build Status](https://img.shields.io/travis/com/dock0/service.svg)](https://travis-ci.com/dock0/service)
-[![MIT Licensed](http://img.shields.io/badge/license-MIT-green.svg)](https://tldrlegal.com/license/mit-license)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/dock0/service/Build)](https://github.com/dock0/service/actions))
+[![License](https://img.shields.io/github/license/dock0/service)](https://github.com/dock0/service/blob/master/LICENSE)
 
 An Arch container with [s6](http://www.skarnet.org/software/s6/) installed for running services
 
