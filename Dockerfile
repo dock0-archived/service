@@ -1,4 +1,4 @@
-FROM docker.pkg.github.com/dock0/amylum_arch/amylum_arch:20200923-87ef4e0
+FROM docker.pkg.github.com/dock0/amylum_arch/amylum_arch:20200923-d295aab
 MAINTAINER akerl <me@lesaker.org>
 RUN pacman -S --noconfirm s6 execline musl-amylum
 ADD service /service
